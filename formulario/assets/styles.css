@@ -27,6 +27,10 @@ body {
     place-items: center;
 }
 
+.page-wide {
+    place-items: start center;
+}
+
 .form-card {
     width: min(100%, 680px);
     padding: clamp(24px, 5vw, 48px);
@@ -36,8 +40,48 @@ body {
     box-shadow: 0 24px 70px rgba(27, 43, 76, 0.1);
 }
 
+.employees-card {
+    width: min(100%, 1380px);
+}
+
 .form-header {
     margin-bottom: 30px;
+}
+
+.page-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: -12px 0 24px;
+}
+
+.secondary-button,
+.button-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border: 1px solid #d8deea;
+    border-radius: 10px;
+    background: #fff;
+    color: #344054;
+    font: inherit;
+    font-weight: 650;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 140ms ease, border-color 140ms ease;
+}
+
+.secondary-button:hover {
+    border-color: #aeb9d0;
+    background: #f8f9fc;
+}
+
+.button-link {
+    width: auto;
+    min-height: 44px;
+    border: 0;
+    color: #fff;
 }
 
 .eyebrow {
@@ -205,6 +249,144 @@ textarea:focus {
     color: #9c2f28;
 }
 
+.edit-panel {
+    margin: 0 0 28px;
+    padding: 24px;
+    border: 1px solid #e5eaf3;
+    border-radius: 14px;
+    background: #f9faff;
+}
+
+.edit-panel h2 {
+    margin: 0 0 20px;
+    font-size: 1.25rem;
+}
+
+.edit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+}
+
+.edit-description,
+.edit-roles {
+    grid-column: 1 / -1;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-actions .submit-button {
+    width: auto;
+    padding: 0 20px;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e5eaf3;
+    border-radius: 12px;
+}
+
+.employees-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    text-align: left;
+}
+
+.employees-table th,
+.employees-table td {
+    padding: 13px 14px;
+    border-bottom: 1px solid #edf0f5;
+    vertical-align: top;
+}
+
+.employees-table th {
+    background: #f7f8fc;
+    color: #344054;
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.employees-table td {
+    color: #475467;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.employees-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.description-cell {
+    min-width: 180px;
+    max-width: 280px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.employees-table form {
+    margin: 0;
+}
+
+.table-action {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    border-radius: 7px;
+    border: 0;
+    background: none;
+    color: #202124;
+    font: inherit;
+    font-weight: 650;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 140ms ease, color 140ms ease;
+}
+
+.table-action:hover {
+    background: #f0f1f3;
+}
+
+.table-action:focus-visible {
+    outline: 2px solid #202124;
+    outline-offset: 2px;
+}
+
+.action-icon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+.empty-state {
+    padding: 28px !important;
+    color: #667085 !important;
+    text-align: center;
+}
+
 @media (max-width: 520px) {
     .page {
         padding: 18px 12px;
@@ -212,5 +394,27 @@ textarea:focus {
 
     .form-card {
         border-radius: 14px;
+    }
+
+    .edit-panel {
+        padding: 16px;
+    }
+
+    .edit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .edit-description,
+    .edit-roles {
+        grid-column: auto;
+    }
+
+    .form-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .form-actions .submit-button {
+        width: 100%;
     }
 }
