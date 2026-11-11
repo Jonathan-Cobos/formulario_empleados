@@ -12,8 +12,7 @@
 - Iniciar un primer PowerShell en la carpeta "demo_formulario".
 - Establecer las credenciales de la base de datos (MySQL) como variables de entorno digitando:
 
--$env:MYSQL_USER = "root"
--$env:MYSQL_PASSWORD = "tu_contraseña"
+$env:MYSQL_USER = "root"; $env:MYSQL_PASSWORD = "contraseña"
 
 - (Esto lo hice con el fin de ser flexible para cada usuario al momento de probar el programa).
 - Inicializar el backend con Spring:
