@@ -1,4 +1,4 @@
-# Ejecutar la aplicación
+# Comó ejecutar la aplicación
 
 ## Requisitos
 
